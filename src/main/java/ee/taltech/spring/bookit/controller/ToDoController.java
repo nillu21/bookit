@@ -22,7 +22,7 @@ public class ToDoController {
     public String hello(Model model, @PathVariable Long id) {
         Todo todo = service.getToDoById(id);
         model.addAttribute(todo);
-        return "index";
+        return "todo";
     }
     @GetMapping(value = "api/{id}")
     @ResponseBody

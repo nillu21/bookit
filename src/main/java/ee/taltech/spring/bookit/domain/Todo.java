@@ -15,7 +15,6 @@ public class Todo {
     private Integer done;
 
     public Todo() {
-
     }
 
     public Long getId() {
