@@ -5,10 +5,7 @@ import ee.taltech.spring.bookit.domain.User;
 import ee.taltech.spring.bookit.service.ToDoService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -37,5 +34,17 @@ public class ToDoController {
         List<Todo> allTodos = service.getToDos();
         model.addAttribute("todos", allTodos);
         return "todoList";
+    }
+
+    @PostMapping("form")
+    public @ResponseBody Todo addTodo(@ModelAttribute Todo todo) {
+        Todo result = service.addTodo(todo);
+        return result;
+    }
+
+    @GetMapping("form")
+    public String getForm(Model model) {
+        model.addAttribute("todo", new Todo());
+        return "form";
     }
 }
