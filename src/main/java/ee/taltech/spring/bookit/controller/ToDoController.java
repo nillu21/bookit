@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 
@@ -22,5 +23,11 @@ public class ToDoController {
         Todo todo = service.getToDoById(id);
         model.addAttribute(todo);
         return "index";
+    }
+    @GetMapping(value = "api/{id}")
+    @ResponseBody
+    public Todo hiThere(@PathVariable Long id) {
+
+        return service.getToDoById(id);
     }
 }
