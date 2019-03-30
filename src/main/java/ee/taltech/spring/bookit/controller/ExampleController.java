@@ -27,7 +27,8 @@ public class ExampleController {
 
     @GetMapping(value = "api/{id}")
     @ResponseBody
-    public User joukijou(@PathVariable Long id) {
+    public User hiThere(@PathVariable Long id) {
+
         return service.getUserById(id);
     }
 }
