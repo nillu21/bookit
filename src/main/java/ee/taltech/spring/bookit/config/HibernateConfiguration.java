@@ -12,7 +12,7 @@ public class HibernateConfiguration {
 
     @Resource
     ObjectMapper mapper;
-
+    // 1234 Olen lahe
     @Bean
     public void hibernateAwareObjectMapper() {
         Hibernate5Module module = new Hibernate5Module();
