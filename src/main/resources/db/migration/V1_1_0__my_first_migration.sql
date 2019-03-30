@@ -21,7 +21,7 @@ CREATE TABLE todo (
     id   long         NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name varchar(255) NOT NULL,
     description  varchar(255) NOT NULL,
-    done bit NOT NULL
+    done TINYINT(1) NOT NULL
 );
 
 INSERT INTO todo(name,description,done)
