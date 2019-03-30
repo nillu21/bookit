@@ -2,8 +2,10 @@ package ee.taltech.spring.bookit.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="todo")
 public class Todo {
 
     @Id
