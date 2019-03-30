@@ -11,9 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Controller
-@RequestMapping("todo")
+@RequestMapping("todoList")
 public class ToDoController {
     @Resource
     ToDoService service;
@@ -29,5 +30,12 @@ public class ToDoController {
     public Todo hiThere(@PathVariable Long id) {
 
         return service.getToDoById(id);
+    }
+
+    @GetMapping()
+    public String getAllTodos(Model model) {
+        List<Todo> allTodos = service.getToDos();
+        model.addAttribute("todos", allTodos);
+        return "todoList";
     }
 }
