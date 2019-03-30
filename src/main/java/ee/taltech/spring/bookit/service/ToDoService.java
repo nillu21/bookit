@@ -23,6 +23,7 @@ public class ToDoService {
 
 
     public Todo addTodo(Todo todo) {
+        todo.setDone(0);
         return repo.save(todo);
     }
 }

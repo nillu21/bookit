@@ -12,7 +12,8 @@ import java.util.List;
 
 @Controller
 @RequestMapping("todoList")
-public class ToDoController {
+public class
+ToDoController {
     @Resource
     ToDoService service;
 
