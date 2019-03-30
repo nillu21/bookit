@@ -20,7 +20,7 @@ VALUES ('reiko', 15);
 CREATE TABLE todo (
     id   long         NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name varchar(255) NOT NULL,
-    description  varchar(255) NOT NULL
+    description  varchar(255) NOT NULL,
     done bit NOT NULL
 );
 
