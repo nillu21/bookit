@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.Resource;
 
+//asd
 @Configuration
 public class HibernateConfiguration {
 
